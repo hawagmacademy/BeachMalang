@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Booking - Wisata Pantai Malang</title>
+  <meta name="description" content="Pemesanan tiket online dan paket tour wisata pantai Malang Selatan.">
+  <meta name="keywords" content="Pantai Malang, Wisata Malang, Booking Tiket Pantai, Tour Malang">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  
+</head>
+
+<body class="booking-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">PantaiMalang</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="destination-details.html">Destination Details</a></li>
+              <li><a href="tour-details.html">Tour Details</a></li>
+              <li><a href="booking.html" class="active">Booking</a></li>
+              <li><a href="testimonials">Testimonials</a></li>
+              <li><a href="faq.html">Frequently Asked Questions</a></li>
+              <li><a href="blog-details.html">Blog Details</a></li>
+              <li><a href="terms.html">Terms</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
+              <li><a href="404.html">404</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="destiantios.html">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
+      <div class="container position-relative">
+        <h1>Pemesanan Tiket</h1>
+        <p>Nikmati pesona keindahan deretan pantai eksotis di Malang Selatan dengan kemudahan sistem pemesanan paket wisata terbaik.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Booking</li>
+          </ol>
+        </nav>
+      </div>
+    </div><section id="travel-booking" class="travel-booking section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="booking-form-container">
+              <div class="booking-progress nav nav-tabs" data-aos="fade-up" data-aos-delay="200">
+                <button class="step nav-link active" data-bs-toggle="tab" data-bs-target="#travel-booking-step-1" aria-current="page">
+                  <span class="step-number">1</span>
+                  <span class="step-title">Paket &amp; Tanggal</span>
+                </button>
+                <button class="step nav-link" data-bs-toggle="tab" data-bs-target="#travel-booking-step-2">
+                  <span class="step-number">2</span>
+                  <span class="step-title">Peserta Wisata</span>
+                </button>
+                <button class="step nav-link" data-bs-toggle="tab" data-bs-target="#travel-booking-step-3">
+                  <span class="step-number">3</span>
+                  <span class="step-title">Layanan Ekstra</span>
+                </button>
+                <button class="step nav-link" data-bs-toggle="tab" data-bs-target="#travel-booking-step-4">
+                  <span class="step-number">4</span>
+                  <span class="step-title">Pembayaran</span>
+                </button>
+              </div><form action="" method="post" class="booking-form" data-aos="fade-up" data-aos-delay="300">
+
+                <div class="tab-content" id="bookingTabContent">
+                  <div class="form-step tab-pane fade show active" id="travel-booking-step-1" role="tabpanel">
+                    <h4>Pilih Paket Wisata &amp; Tanggal Perjalanan</h4>
+
+                    <div class="row gy-4">
+                      <div class="col-md-6">
+                        <label for="tour-select">Pilih Paket Wisata Pantai</label>
+                        <select name="tour_package" id="tour-select" class="form-select" required="">
+                          <option value="">Pilih paket tour...</option>
+                          <option value="pantai-tiga-warna">Eksotika Pantai Tiga Warna - 1 Hari</option>
+                          <option value="jelajah-pantai-selatan">Jelajah Pantai Selatan (Balekambang &amp; Sendang Biru) - 2 Hari</option>
+                          <option value="pesona-goa-cina">Pesona Goa Cina &amp; Clungup Mangrove - 1 Hari</option>
+                          <option value="petualangan-sendiki">Petualangan Camping Pantai Sendiki - 3 Hari</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="tour-duration">Durasi Wisata</label>
+                        <input type="text" name="tour_duration" id="tour-duration" class="form-control" value="1 Hari (Full Day Tour)" readonly="">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="departure-date">Tanggal Keberangkatan</label>
+                        <input type="date" name="departure_date" id="departure-date" class="form-control" required="">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="return-date">Tanggal Kepulangan</label>
+                        <input type="date" name="return_date" id="return-date" class="form-control" required="">
+                      </div>
+
+                      <div class="col-md-4">
+                        <label for="adults">Dewasa</label>
+                        <select name="adults" id="adults" class="form-select" required="">
+                          <option value="1">1 Orang Dewasa</option>
+                          <option value="2">2 Orang Dewasa</option>
+                          <option value="3">3 Orang Dewasa</option>
+                          <option value="4">4 Orang Dewasa</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-4">
+                        <label for="children">Anak-Anak (2-12 tahun)</label>
+                        <select name="children" id="children" class="form-select">
+                          <option value="0">0 Anak-Anak</option>
+                          <option value="1">1 Anak</option>
+                          <option value="2">2 Anak-Anak</option>
+                          <option value="3">3 Anak-Anak</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-4">
+                        <label for="infants">Bayi (0-2 tahun)</label>
+                        <select name="infants" id="infants" class="form-select">
+                          <option value="0">0 Bayi</option>
+                          <option value="1">1 Bayi</option>
+                          <option value="2">2 Bayi</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div><div class="form-step tab-pane fade" id="travel-booking-step-2" role="tabpanel">
+                    <h4>Informasi Wisatawan</h4>
+
+                    <div class="traveler-info">
+                      <h5>Kontak Utama / Perwakilan</h5>
+                      <div class="row gy-3">
+                        <div class="col-md-6">
+                          <label for="first-name">Nama Depan</label>
+                          <input type="text" name="first_name" id="first-name" class="form-control" required="">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="last-name">Nama Belakang</label>
+                          <input type="text" name="last_name" id="last-name" class="form-control" required="">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="email">Alamat Email</label>
+                          <input type="email" name="email" id="email" class="form-control" required="">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="phone">Nomor Telepon / WhatsApp</label>
+                          <input type="tel" name="phone" id="phone" class="form-control" required="">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="nationality">Kewarganegaraan</label>
+                          <select name="nationality" id="nationality" class="form-select" required="">
+                            <option value="">Pilih kewarganegaraan...</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="SG">Singapura</option>
+                            <option value="OTHER">Lainnya</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="special-requirements">
+                      <h5>Permintaan Khusus</h5>
+                      <div class="row gy-3">
+                        <div class="col-12">
+                          <label for="dietary">Alergi / Pantangan Makanan</label>
+                          <textarea name="dietary" id="dietary" class="form-control" rows="3" placeholder="Sebutkan jika ada pantangan makanan atau alergi tertentu selama perjalanan makan siang..."></textarea>
+                        </div>
+                        <div class="col-12">
+                          <label for="special-requests">Catatan Tambahan</label>
+                          <textarea name="special_requests" id="special-requests" class="form-control" rows="3" placeholder="Sebutkan kebutuhan khusus lainnya seperti kursi roda, kebutuhan anak bayi, dll..."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div><div class="form-step tab-pane fade" id="travel-booking-step-3" role="tabpanel">
+                    <h4>Optimalkan Pengalaman Liburan Anda</h4>
+
+                    <div class="addon-options">
+                      <div class="addon-item">
+                        <div class="addon-details">
+                          <div class="addon-check">
+                            <input type="checkbox" name="travel_insurance" id="travel-insurance" value="yes">
+                            <label for="travel-insurance">
+                              <h5>Asuransi Perjalanan</h5>
+                              <p>Perlindungan medis menyeluruh dan jaminan keselamatan selama berwisata di pesisir pantai.</p>
+                            </label>
+                          </div>
+                          <div class="addon-price">
+                            <span class="price">Rp 20.000</span>
+                            <span class="period">per orang</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="addon-item">
+                        <div class="addon-details">
+                          <div class="addon-check">
+                            <input type="checkbox" name="airport_transfer" id="airport-transfer" value="yes">
+                            <label for="airport-transfer">
+                              <h5>Antar Jemput Stasiun / Bandara</h5>
+                              <p>Layanan penjemputan privat dari Bandara Abd Saleh atau Stasiun Malang langsung menuju lokasi pantai.</p>
+                            </label>
+                          </div>
+                          <div class="addon-price">
+                            <span class="price">Rp 350.000</span>
+                            <span class="period">per rute</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="addon-item">
+                        <div class="addon-details">
+                          <div class="addon-check">
+                            <input type="checkbox" name="extra_nights" id="extra-nights" value="yes">
+                            <label for="extra-nights">
+                              <h5>Tambahan Malam Penginapan</h5>
+                              <p>Perpanjang masa tinggal Anda di homestay pantai eksotis atau hotel mitra kami di Kota Malang.</p>
+                            </label>
+                          </div>
+                          <div class="addon-price">
+                            <span class="price">Rp 400.000</span>
+                            <span class="period">per malam</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="addon-item">
+                        <div class="addon-details">
+                          <div class="addon-check">
+                            <input type="checkbox" name="local_guide" id="local-guide" value="yes">
+                            <label for="local-guide">
+                              <h5>Pemandu Lokal Privat (Guide)</h5>
+                              <p>Pemandu wisata khusus untuk menjelajahi spot foto tersembunyi dan jalur aman di sekitar tebing pantai.</p>
+                            </label>
+                          </div>
+                          <div class="addon-price">
+                            <span class="price">Rp 200.000</span>
+                            <span class="period">per hari</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><div class="form-step tab-pane fade" id="travel-booking-step-4" role="tabpanel">
+                    <h4>Informasi Metode Pembayaran</h4>
+
+                    <div class="payment-methods">
+                      <div class="method-selector">
+                        <input type="radio" name="payment_method" id="credit-card" value="credit_card" checked="">
+                        <label for="credit-card"><i class="bi bi-credit-card"></i> Kartu Kredit / Debit</label>
+                      </div>
+                      <div class="method-selector">
+                        <input type="radio" name="payment_method" id="paypal" value="paypal">
+                        <label for="paypal"><i class="bi bi-wallet2"></i> E-Wallet (Dana/OVO)</label>
+                      </div>
+                      <div class="method-selector">
+                        <input type="radio" name="payment_method" id="bank-transfer" value="bank_transfer">
+                        <label for="bank-transfer"><i class="bi bi-bank"></i> Transfer Bank (BCA/Mandiri)</label>
+                      </div>
+                    </div>
+
+                    <div class="payment-details">
+                      <div class="row gy-3">
+                        <div class="col-12">
+                          <label for="card-name">Nama Pemilik Kartu</label>
+                          <input type="text" name="card_name" id="card-name" class="form-control" required="">
+                        </div>
+                        <div class="col-md-8">
+                          <label for="card-number">Nomor Kartu</label>
+                          <input type="text" name="card_number" id="card-number" class="form-control" placeholder="1234 5678 9012 3456" required="">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="card-cvv">CVV</label>
+                          <input type="text" name="card_cvv" id="card-cvv" class="form-control" placeholder="123" required="">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="card-expiry-month">Bulan Kedaluwarsa</label>
+                          <select name="card_expiry_month" id="card-expiry-month" class="form-select" required="">
+                            <option value="">Bulan</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="card-expiry-year">Tahun Kedaluwarsa</label>
+                          <select name="card_expiry_year" id="card-expiry-year" class="form-select" required="">
+                            <option value="">Tahun</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="secure-payment">
+                        <i class="bi bi-shield-check"></i>
+                        <span>Informasi pembayaran Anda aman dan terenkripsi secara instan</span>
+                      </div>
+                    </div>
+
+                    <div class="terms-agreement">
+                      <div class="form-check">
+                        <input type="checkbox" name="terms_agreement" id="terms-agreement" class="form-check-input" required="">
+                        <label for="terms-agreement" class="form-check-label">
+                          Saya menyetujui <a href="#">Syarat &amp; Ketentuan</a> serta <a href="#">Kebijakan Privasi</a> yang berlaku.
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="form-navigation">
+                      <button type="submit" class="btn btn-book">Selesaikan Pemesanan Tiket</button>
+                    </div>
+                  </div></div></form></div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="booking-summary" data-aos="fade-up" data-aos-delay="400">
+              <div class="summary-header">
+                <h4>Ringkasan Pemesanan</h4>
+              </div>
+
+              <div class="selected-tour">
+                <img src="assets/img/travel/tour-15.webp" alt="Selected Tour" class="img-fluid">
+                <div class="tour-info">
+                  <h5>Eksotika Pantai Tiga Warna</h5>
+                  <p><i class="bi bi-calendar"></i> 1 Hari (Full Day Tour)</p>
+                  <p><i class="bi bi-geo-alt"></i> Malang, Indonesia</p>
+                </div>
+              </div>
+
+              <div class="booking-details">
+                <div class="detail-item">
+                  <span class="label">Keberangkatan:</span>
+                  <span class="value">Pilih tanggal</span>
+                </div>
+                <div class="detail-item">
+                  <span class="label">Peserta Wisata:</span>
+                  <span class="value">2 Dewasa</span>
+                </div>
+                <div class="detail-item">
+                  <span class="label">Durasi Tour:</span>
+                  <span class="value">1 Hari</span>
+                </div>
+              </div>
+
+              <div class="price-breakdown">
+                <div class="price-item">
+                  <span class="description">Harga Paket Dasar (2 Dewasa)</span>
+                  <span class="amount">Rp 300.000</span>
+                </div>
+                <div class="price-item">
+                  <span class="description">Asuransi Perjalanan</span>
+                  <span class="amount">Rp 40.000</span>
+                </div>
+                <div class="price-item">
+                  <span class="description">Layanan Antar Jemput</span>
+                  <span class="amount">Rp 350.000</span>
+                </div>
+                <div class="price-item tax-item">
+                  <span class="description">Pajak &amp; Biaya Tiket Masuk</span>
+                  <span class="amount">Rp 35.000</span>
+                </div>
+                <div class="price-total">
+                  <span class="description">Total Pembayaran</span>
+                  <span class="amount">Rp 725.000</span>
+                </div>
+              </div>
+
+              <div class="help-section">
+                <h5>Butuh Bantuan?</h5>
+                <p>Tim layanan pelanggan kami siap membantu kelancaran liburan Anda</p>
+                <div class="contact-info">
+                  <p><i class="bi bi-telephone"></i> +62 (341) 123-4567</p>
+                  <p><i class="bi bi-envelope"></i> info@pantaimalangtour.com</p>
+                </div>
+                <div class="support-hours">
+                  <small>Aktif Layanan 24/7</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section></main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Bergabung dengan Newsletter Kami</h4>
+            <p>Berlangganan newsletter kami dan dapatkan info promo serta diskon eksklusif paket wisata Pantai Malang!</p>
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Langganan"></div>
+              <div class="loading">Memuat</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Permintaan langganan Anda berhasil dikirim. Terima kasih!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">PantaiMalangTour</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Jl. Raya Pantai Selatan, Gedangan</p>
+            <p>Malang, Jawa Timur 65148</p>
+            <p class="mt-3"><strong>Telepon:</strong> <span>+62 812 3456 7890</span></p>
+            <p><strong>Email:</strong> <span>info@pantaimalangtour.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Tautan Penting</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Tentang Kami</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Layanan Paket</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Syarat &amp; Ketentuan</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Layanan Kami</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Paket Open Trip</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Sewa Mobil &amp; Driver</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Private Tour Guide</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Booking Homestay Pantai</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Ikuti Sosial Media Kami</h4>
+          <p>Dapatkan update harian tentang kondisi ombak, rute jalan baru, dan pesona keindahan tersembunyi pantai Malang Selatan.</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">PantaiMalangTour</strong> <span>All Rights Reserved</span></p>
+    </div>
+
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
