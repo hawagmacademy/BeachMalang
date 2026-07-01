@@ -49,6 +49,29 @@
   });
 
   /**
+   * Set active class on navmenu based on current URL
+   */
+  let path = window.location.pathname;
+  let page = path.split("/").pop() || "index.html"; // handle root as index.html
+  
+  document.querySelectorAll('#navmenu a').forEach(a => {
+    // Only target main menu links, not dropdown toggles if any, but since it's a simple menu, this should work.
+    let href = a.getAttribute('href');
+    if (href && !href.startsWith('#')) {
+      a.classList.remove('active');
+      if (href === page || (page === '' && href === 'index.html')) {
+        a.classList.add('active');
+      } else if (page.startsWith('tour-') && href === 'tours.html') {
+        a.classList.add('active'); // active for tour detail pages
+      } else if (page.startsWith('desti-') && href === 'destinations.html') {
+        a.classList.add('active'); // active for destination detail pages
+      } else if (page.startsWith('detail-blog') && href === 'blog.html') {
+        a.classList.add('active'); // active for blog detail pages
+      }
+    }
+  });
+
+  /**
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
