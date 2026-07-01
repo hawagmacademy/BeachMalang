@@ -23,7 +23,69 @@
 
   <link href="assets/css/main.css" rel="stylesheet">
 
-  </head>
+  <!-- Tambahan CSS Custom untuk Memperbaiki Tampilan Mobile Tour Hero -->
+  <style>
+    @media (max-width: 768px) {
+      .hero-image-wrapper {
+        position: relative;
+        min-height: 460px !important; /* Menyesuaikan tinggi card agar pas di mobile */
+        height: 460px !important;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+      .hero-image-wrapper img {
+        object-fit: cover !important;
+        height: 100% !important;
+        width: 100% !important;
+      }
+      .hero-overlay {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 65%, rgba(0, 0, 0, 0.2) 100%) !important;
+        padding: 20px 15px !important;
+        display: flex !important;
+        align-items: flex-end !important;
+      }
+      .hero-content {
+        width: 100% !important;
+        padding-top: 10px !important; /* Memberikan ruang di atas agar judul tidak terpotong */
+      }
+      .hero-content h1 {
+        font-size: 1.6rem !important; /* Menyesuaikan ukuran judul agar pas dan rapi */
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+        line-height: 1.3 !important;
+        color: #fff !important;
+        font-weight: 700 !important;
+      }
+      .hero-meta {
+        display: flex !important;
+        flex-direction: column !important; /* Menyusun informasi meta ke bawah */
+        gap: 6px !important;
+        margin-bottom: 12px !important;
+      }
+      .hero-meta span {
+        font-size: 0.85rem !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
+      .hero-tagline {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
+        opacity: 0.85;
+      }
+      .btn-book {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important; /* Tombol dibuat full width di mobile agar mudah ditekan */
+        padding: 10px !important;
+        font-size: 0.9rem !important;
+      }
+    }
+  </style>
+
+</head>
 
 <body class="tour-details-page">
 
@@ -66,10 +128,13 @@
           </ol>
         </nav>
       </div>
-    </div><section id="travel-tour-details" class="travel-tour-details section">
+    </div>
+
+    <section id="travel-tour-details" class="travel-tour-details section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
+        <!-- Area Kartu Utama yang Diperbaiki -->
         <div class="tour-hero">
           <div class="hero-image-wrapper">
             <img src="assets/img/travel/tour-14.webp" alt="Paket Romantic Honeymoon Trip" class="img-fluid w-100">
@@ -360,7 +425,8 @@
 
       </div>
 
-    </section></main>
+    </section>
+  </main>
 
   <footer id="footer" class="footer position-relative dark-background">
 
@@ -371,7 +437,6 @@
             <h4>Bergabung dengan Buletin Kami</h4>
             <p>Dapatkan informasi destinasi wisata pantai terbaru di Malang Selatan dan promo menarik langsung di email Anda.</p>
             
-            <!-- Menambahkan id="footer-newsletter" untuk mengunci form -->
             <form id="footer-newsletter" action="forms/newsletter.php" method="post" class="php-email-form">
               <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Berlangganan"></div>
               <div class="loading" style="display: none;">Memuat</div>
@@ -382,10 +447,8 @@
         </div>
       </div>
 
-      <!-- Skrip Pemblokir Error Merah & Penjaga Notifikasi Hijau untuk Footer -->
       <script>
         document.getElementById('footer-newsletter').addEventListener('submit', function(event) {
-          // Blokir pengiriman PHP asli dan hentikan validate.js bawaan template
           event.preventDefault();
           event.stopImmediatePropagation();
           
@@ -394,33 +457,28 @@
           const errorMessage = form.querySelector('.error-message');
           const sentMessage = form.querySelector('.sent-message');
 
-          // Matikan dan sembunyikan total notifikasi merah jika sempat terpicu luar
           if (errorMessage) {
             errorMessage.style.setProperty('display', 'none', 'important');
             errorMessage.classList.remove('d-block');
             errorMessage.innerHTML = '';
           }
 
-          // Reset notifikasi hijau sebelum loading dimulai
           if (sentMessage) {
             sentMessage.style.display = 'none';
             sentMessage.classList.remove('d-block');
           }
 
-          // Tampilkan teks memuat bawaan
           if (loading) {
             loading.style.display = 'block';
             loading.classList.add('d-block');
           }
 
-          // Simulasi loading cepat selama 500ms
           setTimeout(() => {
             if (loading) {
               loading.style.display = 'none';
               loading.classList.remove('d-block');
             }
             
-            // Munculkan hanya notifikasi kotak hijau secara paksa (!important)
             if (sentMessage) {
               sentMessage.style.setProperty('display', 'block', 'important');
               sentMessage.classList.add('d-block');
@@ -428,7 +486,7 @@
             
             form.reset();
           }, 500);
-        }, true); // Menggunakan opsi true agar dieksekusi paling awal sebelum skrip template
+        }, true);
       </script>
     </div>
 
@@ -503,9 +561,8 @@
 
   <script>
     document.getElementById('whatsappBookingForm').addEventListener('submit', function(e) {
-      e.preventDefault(); // Mencegah reload halaman bawaan form
+      e.preventDefault();
 
-      // Mengambil data inputan user
       var travelDate = document.getElementById('travel-date').value;
       var travelers = document.getElementById('travelers').value;
       var name = document.getElementById('name').value;
@@ -513,10 +570,8 @@
       var phone = document.getElementById('phone').value;
       var message = document.getElementById('message').value || "Tidak ada";
 
-      // Nomor WhatsApp Admin (Silakan ganti nomor ini sesuai kebutuhan Anda)
       var adminWhatsAppNumber = "6281234567890"; 
 
-      // Format susunan text pesan WhatsApp
       var textMessage = "Halo Beach Malang, saya ingin memesan paket wisata *Romantic Honeymoon Trip*:\n\n" +
                         "*Nama Lengkap:* " + name + "\n" +
                         "*Email:* " + email + "\n" +
@@ -526,15 +581,12 @@
                         "*Catatan Tambahan:* " + message + "\n\n" +
                         "Mohon dibantu untuk proses ketersediaan slotnya, terima kasih!";
 
-      // Mengubah pesan teks menjadi format URL aman
       var encodedText = encodeURIComponent(textMessage);
       var whatsappURL = "https://wa.me/" + adminWhatsAppNumber + "?text=" + encodedText;
 
-      // Memunculkan teks terima kasih di atas form
       var thankYouBox = document.getElementById('thankYouMessage');
       thankYouBox.style.display = 'block';
 
-      // Mengarahkan ke link WhatsApp setelah jeda 1.5 detik agar user sempat membaca teks terima kasih
       setTimeout(function() {
         window.open(whatsappURL, '_blank');
       }, 1500);
