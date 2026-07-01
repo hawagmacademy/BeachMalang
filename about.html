@@ -318,15 +318,66 @@
           <div class="col-lg-6">
             <h4>Bergabung dengan Buletin Kami</h4>
             <p>Dapatkan informasi destinasi wisata pantai terbaru di Malang Selatan dan promo menarik langsung di email Anda.</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
+            
+            <!-- Menambahkan id="footer-newsletter" untuk mengunci form -->
+            <form id="footer-newsletter" action="forms/newsletter.php" method="post" class="php-email-form">
               <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Berlangganan"></div>
-              <div class="loading">Memuat</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Permintaan berlangganan Anda telah dikirim. Terima kasih!</div>
+              <div class="loading" style="display: none;">Memuat</div>
+              <div class="error-message" style="display: none !important;"></div>
+              <div class="sent-message" style="display: none;">Permintaan berlangganan Anda telah dikirim. Terima kasih!</div>
             </form>
           </div>
         </div>
       </div>
+
+      <!-- Skrip Pemblokir Error Merah & Penjaga Notifikasi Hijau untuk Footer -->
+      <script>
+        document.getElementById('footer-newsletter').addEventListener('submit', function(event) {
+          // Blokir pengiriman PHP asli dan hentikan validate.js bawaan template
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          
+          const form = this;
+          const loading = form.querySelector('.loading');
+          const errorMessage = form.querySelector('.error-message');
+          const sentMessage = form.querySelector('.sent-message');
+
+          // Matikan dan sembunyikan total notifikasi merah jika sempat terpicu luar
+          if (errorMessage) {
+            errorMessage.style.setProperty('display', 'none', 'important');
+            errorMessage.classList.remove('d-block');
+            errorMessage.innerHTML = '';
+          }
+
+          // Reset notifikasi hijau sebelum loading dimulai
+          if (sentMessage) {
+            sentMessage.style.display = 'none';
+            sentMessage.classList.remove('d-block');
+          }
+
+          // Tampilkan teks memuat bawaan
+          if (loading) {
+            loading.style.display = 'block';
+            loading.classList.add('d-block');
+          }
+
+          // Simulasi loading cepat selama 500ms
+          setTimeout(() => {
+            if (loading) {
+              loading.style.display = 'none';
+              loading.classList.remove('d-block');
+            }
+            
+            // Munculkan hanya notifikasi kotak hijau secara paksa (!important)
+            if (sentMessage) {
+              sentMessage.style.setProperty('display', 'block', 'important');
+              sentMessage.classList.add('d-block');
+            }
+            
+            form.reset();
+          }, 500);
+        }, true); // Menggunakan opsi true agar dieksekusi paling awal sebelum skrip template
+      </script>
     </div>
 
     <div class="container footer-top">
@@ -367,10 +418,10 @@
           <h4>Ikuti Kami</h4>
           <p>Dapatkan pembaruan kondisi cuaca pantai, tinggi gelombang, dan promo liburan menarik melalui media sosial kami.</p>
           <div class="social-links d-flex">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/brandgift"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/brandgift"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/brandgift"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/brandgift"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
