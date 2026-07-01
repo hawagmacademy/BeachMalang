@@ -697,14 +697,14 @@ h6 {
 --------------------------------------------------------------*/
 .whatsapp-float {
   position: fixed;
-  right: 20px;
-  bottom: 90px;
+  right: 15px;
+  bottom: 70px;
   z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #25d366;
   color: #ffffff;
@@ -721,16 +721,16 @@ h6 {
 }
 
 .whatsapp-float i {
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1;
 }
 
 @media (max-width: 768px) {
   .whatsapp-float {
     right: 15px;
-    bottom: 80px;
-    width: 52px;
-    height: 52px;
+    bottom: 70px;
+    width: 44px;
+    height: 44px;
   }
 
   .whatsapp-float i {
@@ -4171,7 +4171,8 @@ section,
 
 @media (max-width: 768px) {
   .travel-tour-details .tour-hero .hero-content h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
   }
 }
 
@@ -4304,7 +4305,7 @@ section,
 
 @media (max-width: 768px) {
   .travel-tour-details .tour-itinerary .itinerary-timeline::before {
-    left: 25px;
+    left: 20px;
   }
 }
 
@@ -4316,7 +4317,8 @@ section,
 
 @media (max-width: 768px) {
   .travel-tour-details .tour-itinerary .itinerary-item {
-    padding-left: 80px;
+    padding-left: 0;
+    padding-top: 45px;
   }
 }
 
@@ -4338,9 +4340,13 @@ section,
 
 @media (max-width: 768px) {
   .travel-tour-details .tour-itinerary .itinerary-item .day-number {
-    width: 60px;
-    height: 60px;
-    font-size: 0.8rem;
+    width: auto;
+    height: auto;
+    padding: 6px 15px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    left: 0;
+    top: 0;
   }
 }
 
