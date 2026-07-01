@@ -92,6 +92,20 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
+   * Floating WhatsApp button
+   */
+  if (!document.querySelector('.whatsapp-float')) {
+    const whatsappFloat = document.createElement('a');
+    whatsappFloat.href = 'https://wa.me/6281234567890?text=Halo%20Beach%20Malang,%20saya%20ingin%20bertanya%20tentang%20paket%20wisata.';
+    whatsappFloat.className = 'whatsapp-float';
+    whatsappFloat.target = '_blank';
+    whatsappFloat.rel = 'noopener noreferrer';
+    whatsappFloat.setAttribute('aria-label', 'Hubungi WhatsApp');
+    whatsappFloat.innerHTML = '<i class="bi bi-whatsapp"></i>';
+    document.body.appendChild(whatsappFloat);
+  }
+
+  /**
    * Animation on scroll function and init
    */
   function aosInit() {
