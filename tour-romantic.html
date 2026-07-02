@@ -28,58 +28,73 @@
     @media (max-width: 768px) {
       .hero-image-wrapper {
         position: relative;
-        min-height: 460px !important; /* Menyesuaikan tinggi card agar pas di mobile */
-        height: 460px !important;
+        min-height: 420px !important;
+        height: 420px !important;
         overflow: hidden;
         border-radius: 12px;
       }
+
       .hero-image-wrapper img {
         object-fit: cover !important;
         height: 100% !important;
         width: 100% !important;
       }
+
       .hero-overlay {
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 65%, rgba(0, 0, 0, 0.2) 100%) !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.3) 100%) !important;
         padding: 20px 15px !important;
         display: flex !important;
-        align-items: flex-end !important;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        z-index: 2;
       }
+
       .hero-content {
         width: 100% !important;
-        padding-top: 10px !important; /* Memberikan ruang di atas agar judul tidak terpotong */
+        text-align: left;
       }
+
       .hero-content h1 {
-        font-size: 1.6rem !important; /* Menyesuaikan ukuran judul agar pas dan rapi */
-        margin-top: 0 !important;
-        margin-bottom: 10px !important;
+        font-size: 1.5rem !important;
+        margin: 0 0 10px 0 !important;
         line-height: 1.3 !important;
         color: #fff !important;
         font-weight: 700 !important;
       }
+
       .hero-meta {
         display: flex !important;
-        flex-direction: column !important; /* Menyusun informasi meta ke bawah */
+        flex-direction: column !important;
         gap: 6px !important;
         margin-bottom: 12px !important;
       }
+
       .hero-meta span {
-        font-size: 0.85rem !important;
+        font-size: 0.8rem !important;
         display: inline-flex !important;
         align-items: center !important;
         gap: 6px !important;
-        color: rgba(255, 255, 255, 0.9) !important;
+        color: rgba(255, 255, 255, 0.95) !important;
       }
+
       .hero-tagline {
-        font-size: 0.8rem !important;
+        font-size: 0.75rem !important;
         line-height: 1.4 !important;
         margin-bottom: 15px !important;
-        opacity: 0.85;
+        color: rgba(255, 255, 255, 0.9) !important;
       }
+
       .btn-book {
         display: block !important;
         text-align: center !important;
-        width: 100% !important; /* Tombol dibuat full width di mobile agar mudah ditekan */
-        padding: 10px !important;
+        width: 100% !important;
+        padding: 10px 15px !important;
         font-size: 0.9rem !important;
       }
     }
